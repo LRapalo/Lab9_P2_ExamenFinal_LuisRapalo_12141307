@@ -17,8 +17,7 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         int[][] matriz = new int[10][10];
-        Llenado(matriz);
-        JT_Mapa.setText();
+        JT_Mapa.setText(Llenado(matriz));
     }
     public String Llenado (int[][] matriz){
         String llenado = "";
