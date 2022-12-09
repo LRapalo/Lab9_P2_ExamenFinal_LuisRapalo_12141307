@@ -16,6 +16,8 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        int[][] matriz = new int[13][33];
+        
     }
 
     /**
