@@ -34,7 +34,7 @@ public class Main extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JT_Mapa = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        JB_Navidad = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,8 +62,13 @@ public class Main extends javax.swing.JFrame {
         JT_Mapa.setRows(5);
         jScrollPane1.setViewportView(JT_Mapa);
 
-        jButton1.setFont(new java.awt.Font("Zilla Slab Light", 1, 11)); // NOI18N
-        jButton1.setText("Navidad");
+        JB_Navidad.setFont(new java.awt.Font("Zilla Slab Light", 1, 11)); // NOI18N
+        JB_Navidad.setText("Navidad");
+        JB_Navidad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_NavidadMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -76,7 +81,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(JB_Navidad)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(JB_Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -93,7 +98,7 @@ public class Main extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JB_Navidad, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -114,6 +119,13 @@ public class Main extends javax.swing.JFrame {
     private void JT_MovimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_MovimientoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JT_MovimientoActionPerformed
+
+    private void JB_NavidadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_NavidadMouseClicked
+        // TODO add your handling code here:
+        Navidad ventana = new Navidad ();
+        ventana.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_JB_NavidadMouseClicked
 
     /**
      * @param args the command line arguments
@@ -154,9 +166,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton JB_Cargar;
     private javax.swing.JButton JB_Comenzar;
     private javax.swing.JButton JB_Guardar;
+    private javax.swing.JButton JB_Navidad;
     private javax.swing.JTextArea JT_Mapa;
     private javax.swing.JTextField JT_Movimiento;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
