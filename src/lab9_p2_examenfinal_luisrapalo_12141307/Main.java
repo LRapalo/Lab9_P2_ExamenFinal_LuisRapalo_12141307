@@ -16,10 +16,21 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
-        int[][] matriz = new int[13][33];
-        
+        int[][] matriz = new int[10][10];
+        Llenado(matriz);
+        JT_Mapa.setText();
     }
-
+    public String Llenado (int[][] matriz){
+        String llenado = "";
+        for (int i = 10; i > -1; i --){
+            for (int j = 10; j > -1; j--) {
+                System.out.println("*");
+                llenado += matriz [i][j];
+            }
+            llenado += "\n";
+        }
+        return llenado;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
